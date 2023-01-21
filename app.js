@@ -1,12 +1,15 @@
 // point to the container so we can reference it later
 const container = document.querySelector(".container");
-let squares;
+
+//call function to draw default of 16x16
 draw()
 
 function draw(number = 16) {
 
     const xbyx = document.querySelector("h2")
     xbyx.innerText = `${number}x${number}`;
+
+    // this loop will add in rows, then we will fill rows with boxes
     for (let i = 0; i < number; i++) {
         let row = document.createElement("div")
         row.classList.add("box");
@@ -23,11 +26,11 @@ function draw(number = 16) {
     let hov = document.querySelectorAll(".cell");
 
     // add event listener using forEach
-    // hover for CPU
     hov.forEach((div) => {
         div.addEventListener('mouseover', () => {
             div.classList.add("fill")
             console.log("work")
+            //optional trail
             // setTimeout(() => {
             //     div.classList.add("fillBlue");
             // },2000);
@@ -36,7 +39,7 @@ function draw(number = 16) {
 }
 
 
-
+//button to clear grid of all filled boxes
 let but = document.querySelector(".but");
 but.addEventListener("click", () => {
     let clear = document.querySelectorAll(".cell")
@@ -45,9 +48,10 @@ but.addEventListener("click", () => {
     })
 });
 
+//button to update the number of boxes per side, then call draw function, this time with new number. 
 let butt = document.querySelector(".butO");
 butt.addEventListener("click", () => {
-    squares = prompt("How many squares per side?")
+    let squares = prompt("How many squares per side?")
     container.innerHTML = "";
     draw(squares);
 });

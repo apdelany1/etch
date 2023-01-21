@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* default classes for etch-a-sketch */
 body {
     height: 100vh;
     border: 4px dotted red;
@@ -15,6 +16,14 @@ body {
 
 img {
     width: 55px;
+}
+
+h1 {
+    text-shadow: 7px 7px #ff0000;
+}
+
+h2 {
+    text-shadow: 3px 3px #ff0000;
 }
 
 .form {
@@ -35,6 +44,16 @@ img {
     align-items: center;
     justify-content: space-evenly;
     font-size: 50px;
+}
+
+.container {
+    width: 600px;
+    height: 600px;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 12px 12px 2px 1px rgba(238, 7, 7, 0.342);
+    padding: 5px;
 }
 
 .button {
@@ -65,24 +84,9 @@ button:hover {
     color: #fff;
   }
 
-h1 {
-    text-shadow: 7px 7px #ff0000;
-}
 
-h2 {
-    text-shadow: 3px 3px #ff0000;
-}
 
-.container {
-    width: 600px;
-    height: 600px;
-    border: 3px solid black;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 12px 12px 2px 1px rgba(238, 7, 7, 0.342);
-    padding: 5px;
-}
-
+/* classes in which we will add via javascript */
 .box {
     color: red; 
     font-family: arial;
